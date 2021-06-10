@@ -1,8 +1,12 @@
-# zeek_anomaly_detector
+## Elasticsearch Anomaly_Detector
+Improved zeek anomaly detector with elasticsearch data.
+
+## Background of Original Project
+### Anomaly_Detector
 
 An anomaly detector for conn.log files of zeek/bro. It uses Zeek Analysis Tools (ZAT) to load the file, and pyod models. It is completely automated, so you can just give the file and will ouput the anomalous flows. By default uses the PCA model.
 
-## Dependencies
+### Dependencies
 
 Please install the following dependencies:
 - zat: The ZAT Python package supports the processing and analysis of Zeek data with Pandas, scikit-learn, and Spark.
@@ -10,7 +14,7 @@ Please install the following dependencies:
 
 Install with pip: `pip install zat pyod`
 
-## Usage
+### Usage
 ```
 $ time ./zeek_anomaly_detector.py -a 20 -f sample-logs/conn.log 
 Simple Anomaly Detector for Zeek conn.log files. Version: 0.2
@@ -44,12 +48,9 @@ user	0m3.540s
 sys	0m0.581s
 ```
 
-# Performace
+### Performace
 Using the PCA model, ```zeek_anomaly_detector.py``` is capable of training and testing 6.3Million flow lines in 11minutes.
 
-
-
-
-# TODO
+### TODO
 - Add categorical data
 - filter flows that we don't want to treat
